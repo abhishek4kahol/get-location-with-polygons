@@ -55,7 +55,6 @@ router.get('/address', async (req, res) => {
             });
         }
 
-        // AIzaSyBeQ1uHJs96R6ObZzDFNPZF881aM0jtvYg
         const url = geoLocation_URL + req.query.address + '+CA&key=' + geoLocation_APIKEY;
         const geoLocation = await axios.get(url).catch(() => {
             return res.status(500).json({
